@@ -1,8 +1,44 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Francisco Rocco Allegri
+ * Created on: Oct 2024
+ * This program sets neopixels to red if the distance sensed is 10cm, else they are set to green
 */
 
-basic.showString('Hello, World!')
+let neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+let distanceToObject: number = 0
+
+basic.clearScreen()
+neopixelStrip.clear()
+neopixelStrip.show()
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.A, function () {
+
+    basic.clearScreen()
+    neopixelStrip.clear()
+    neopixelStrip.show()
+    distanceToObject = sonar.ping(
+        DigitalPin.P1,
+        DigitalPin.P2,
+        PingUnit.Centimeters
+    )
+
+if ( distanceToObject < 10) {
+    
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.show()
+
+} else {
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.show()
+
+}
+
+})
