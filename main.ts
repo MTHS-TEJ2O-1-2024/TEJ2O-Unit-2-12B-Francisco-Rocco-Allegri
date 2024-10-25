@@ -2,7 +2,7 @@
  *
  * Created by: Francisco Rocco Allegri
  * Created on: Oct 2024
- * This program sets neopixels to red if the distance sensed is 10cm, else they are set to green
+ * This program sets neopixels to red if the distance sensed is 10cm, else they are set to green. This program only uses an If, Else satement
 */
 
 let neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
