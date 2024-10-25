@@ -15,7 +15,6 @@ basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
 
-    basic.clearScreen()
     neopixelStrip.clear()
     neopixelStrip.show()
     distanceToObject = sonar.ping(
@@ -31,6 +30,12 @@ if ( distanceToObject < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.show()
+    basic.pause(2000)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
 
 } else {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
@@ -38,7 +43,12 @@ if ( distanceToObject < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.show()
-
+    basic.pause(2000)
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
 }
 
 })
