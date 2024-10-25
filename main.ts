@@ -26,29 +26,25 @@ input.onButtonPressed(Button.A, function () {
 if ( distanceToObject < 10) {
     
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.show()
     basic.pause(2000)
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.clear()
     neopixelStrip.show()
 
 } else {
+
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.show()
     basic.pause(2000)
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.clear()
     neopixelStrip.show()
+
 }
 
 })
